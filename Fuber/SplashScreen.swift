@@ -42,6 +42,13 @@ struct SplashScreen: View {
         .offset(x: 20,
                 y: 0)
       
+      FuberU(percent: percent)
+        .stroke(Color.white, lineWidth: uLineWidth)
+        .onAppear() {
+          self.handleAnimations()
+      }
+      .frame(width: 45, height: 45, alignment: .center)
+
       Spacer()
     }
     .frame(minWidth: 0, maxWidth: .infinity,
