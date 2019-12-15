@@ -60,7 +60,7 @@ struct SplashScreen: View {
       }
       .scaleEffect(uScale * uZoomFactor)
       .frame(width: 45, height: 45, alignment: .center)
-
+      
       Rectangle()
         .fill(squareColor)
         .scaleEffect(SquareScale * uZoomFactor)
@@ -68,13 +68,13 @@ struct SplashScreen: View {
         .onAppear() {
           self.squareColor = self.fuberBlue
       }
-
+      
       Rectangle()
         .fill(fuberBlue)
         .scaleEffect(lineScale, anchor: .bottom)
         .frame(width: lineWith, height: lineHeight, alignment: .center)
         .offset(x: 0, y: -22)
-
+      
       Spacer()
     }
     .frame(minWidth: 0, maxWidth: .infinity,
@@ -102,6 +102,19 @@ extension SplashScreen {
       percent = 1
       uScale = 5
       lineScale = 1
+    }
+    
+    let deadline: DispatchTime = .now() + uAnimationDuration + uAnimationDelay
+    DispatchQueue.main.asyncAfter(deadline: deadline) {
+      
+      withAnimation(.easeOut(duration: self.uExitAnimationDuration)) {
+        self.uScale = 0
+        self.lineScale = 0
+      }
+      
+      withAnimation(.easeOut(duration: self.minAnimationInterval)) {
+        self.SquareScale = 0
+      }
     }
   }
   
