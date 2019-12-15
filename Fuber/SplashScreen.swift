@@ -46,6 +46,12 @@ struct SplashScreen: View {
   
   var body: some View {
     ZStack {
+
+      Image("Chimes")
+        .resizable(resizingMode: .tile)
+        .opacity(textAlpha)
+        .scaleEffect(textScale)
+
       Text("F           BER")
         .font(.largeTitle)
         .foregroundColor(.white)
