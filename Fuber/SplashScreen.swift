@@ -86,6 +86,11 @@ struct SplashScreen: View {
 
 extension SplashScreen {
   var uAnimationDuration: Double { return 1.0 }
+  var uAnimationDelay: Double { return 0.2 }
+  var uExitAnimationDuration: Double { return 0.3 }
+  var uFinalAnimationDuration: Double { return 0.4 }
+  var minAnimationInterval: Double { return 0.1 }
+  var fadeAnimationDuration: Double { return 0.4 }
   
   func handleAnimations() {
     runAnimationPart1()
