@@ -71,7 +71,7 @@ struct SplashScreen: View {
       FuberU(percent: percent)
         .stroke(Color.white, lineWidth: uLineWidth)
         .rotationEffect(.degrees(-90))
-        .aspectRatio(contentMode: .fit)
+        .aspectRatio(1, contentMode: .fit)
         .padding(20)
         .onAppear() {
           self.handleAnimations()
