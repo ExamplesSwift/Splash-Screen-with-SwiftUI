@@ -35,6 +35,8 @@ struct SplashScreen: View {
   
   @State var percent = 0.0
   @State var uScale: CGFloat = 1
+  @State var squareColor = Color.white
+  @State var SquareScale: CGFloat = 1
   
   var body: some View {
     ZStack {
