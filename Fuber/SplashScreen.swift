@@ -32,6 +32,7 @@ struct SplashScreen: View {
   let fuberBlue = Color("Fuber blue")
   let uLineWidth: CGFloat = 5
   let uZoomFactor: CGFloat = 1.4
+  let uSquareLength: CGFloat = 12
   
   @State var percent = 0.0
   @State var uScale: CGFloat = 1
