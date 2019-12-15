@@ -48,7 +48,7 @@ struct SplashScreen: View {
           self.handleAnimations()
       }
       .frame(width: 45, height: 45, alignment: .center)
-
+      
       Spacer()
     }
     .frame(minWidth: 0, maxWidth: .infinity,
@@ -63,11 +63,20 @@ extension SplashScreen {
   
   func handleAnimations() {
     runAnimationPart1()
+    restartAnimation()
   }
   
   func runAnimationPart1() {
     withAnimation(.easeIn(duration: uAnimationDuration)) {
       percent = 1
+    }
+  }
+
+  func restartAnimation() {
+    let deadline: DispatchTime = .now() + uAnimationDuration
+    DispatchQueue.main.asyncAfter(deadline: deadline) {
+      self.percent = 0
+      self.handleAnimations()
     }
   }
 }
