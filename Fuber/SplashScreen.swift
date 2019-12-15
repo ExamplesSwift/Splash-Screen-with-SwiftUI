@@ -125,6 +125,15 @@ extension SplashScreen {
       self.SquareScale = 1
     }
   }
+  
+  func runAnimationPart3() {
+    DispatchQueue.main.asyncAfter(deadline: .now() + 2 * uAnimationDuration) {
+      
+      withAnimation(.easeIn(duration: self.finalAnimationDuration)) {
+        self.squareColor = self.fuberBlue
+      }
+    }
+  }
 
   func restartAnimation() {
     let deadline: DispatchTime = .now() + uAnimationDuration
