@@ -143,6 +143,7 @@ extension SplashScreen {
     DispatchQueue.main.asyncAfter(deadline: .now() + 2 * uAnimationDuration) {
       
       withAnimation(.easeIn(duration: self.finalAnimationDuration)) {
+        self.textAlpha = 0
         self.squareColor = self.fuberBlue
       }
     }
