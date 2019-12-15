@@ -94,6 +94,8 @@ extension SplashScreen {
   
   func handleAnimations() {
     runAnimationPart1()
+    runAnimationPart2()
+    runAnimationPart3()
     restartAnimation()
   }
   
