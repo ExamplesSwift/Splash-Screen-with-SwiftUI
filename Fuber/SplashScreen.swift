@@ -101,6 +101,7 @@ extension SplashScreen {
     withAnimation(.easeIn(duration: uAnimationDuration)) {
       percent = 1
       uScale = 5
+      lineScale = 1
     }
   }
   
