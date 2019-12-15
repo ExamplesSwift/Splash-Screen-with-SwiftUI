@@ -176,6 +176,8 @@ extension SplashScreen {
     DispatchQueue.main.asyncAfter(deadline: deadline) {
       self.percent = 0
       self.textScale = 1
+      self.coverCircleAlpha = 0
+      self.coverCircleScale = 1
       self.handleAnimations()
     }
   }
