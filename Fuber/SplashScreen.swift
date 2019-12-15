@@ -118,6 +118,14 @@ extension SplashScreen {
     }
   }
   
+  func runAnimationPart2() {
+    let deadline: DispatchTime = .now() + uAnimationDuration + uAnimationDelay + minAnimationInterval
+    DispatchQueue.main.asyncAfter(deadline: deadline) {
+      self.squareColor = Color.white
+      self.SquareScale = 1
+    }
+  }
+
   func restartAnimation() {
     let deadline: DispatchTime = .now() + uAnimationDuration
     DispatchQueue.main.asyncAfter(deadline: deadline) {
