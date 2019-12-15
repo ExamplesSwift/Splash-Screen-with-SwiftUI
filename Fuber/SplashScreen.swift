@@ -75,6 +75,7 @@ extension SplashScreen {
   func runAnimationPart1() {
     withAnimation(.easeIn(duration: uAnimationDuration)) {
       percent = 1
+      uScale = 5
     }
   }
   
