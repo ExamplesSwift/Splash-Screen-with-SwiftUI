@@ -153,6 +153,12 @@ extension SplashScreen {
       self.squareColor = Color.white
       self.SquareScale = 1
     }
+    
+    withAnimation(.easeOut(duration: self.fadeAnimationDuration)) {
+      self.coverCircleAlpha = 1
+      self.coverCircleScale = 1000
+    }
+
   }
   
   func runAnimationPart3() {
