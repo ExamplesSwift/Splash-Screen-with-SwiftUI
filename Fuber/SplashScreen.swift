@@ -30,6 +30,9 @@ import SwiftUI
 
 struct SplashScreen: View {
   let fuberBlue = Color("Fuber blue")
+  let uLineWidth: CGFloat = 5
+  
+  @State var percent = 0.0
   
   var body: some View {
     ZStack {
