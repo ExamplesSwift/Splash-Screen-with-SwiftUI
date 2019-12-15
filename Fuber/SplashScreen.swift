@@ -33,6 +33,8 @@ struct SplashScreen: View {
   let uLineWidth: CGFloat = 5
   let uZoomFactor: CGFloat = 1.4
   let uSquareLength: CGFloat = 12
+  let lineWith: CGFloat = 4
+  let lineHeight: CGFloat = 28
   
   @State var percent = 0.0
   @State var uScale: CGFloat = 1
