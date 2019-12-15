@@ -35,7 +35,7 @@ struct SplashScreen: View {
   
   @State var percent = 0.0
   @State var uScale: CGFloat = 1
-
+  
   var body: some View {
     ZStack {
       Text("F           BER")
@@ -46,9 +46,13 @@ struct SplashScreen: View {
       
       FuberU(percent: percent)
         .stroke(Color.white, lineWidth: uLineWidth)
+        .rotationEffect(.degrees(-90))
+        .aspectRatio(contentMode: .fit)
+        .padding(20)
         .onAppear() {
           self.handleAnimations()
       }
+      .scaleEffect(uScale * uZoomFactor)
       .frame(width: 45, height: 45, alignment: .center)
       
       Spacer()
@@ -73,7 +77,7 @@ extension SplashScreen {
       percent = 1
     }
   }
-
+  
   func restartAnimation() {
     let deadline: DispatchTime = .now() + uAnimationDuration
     DispatchQueue.main.asyncAfter(deadline: deadline) {
