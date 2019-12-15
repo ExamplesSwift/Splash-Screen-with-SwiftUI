@@ -48,6 +48,20 @@ struct SplashScreen: View {
   }
 }
 
+extension SplashScreen {
+  var uAnimationDuration: Double { return 1.0 }
+  
+  func handleAnimations() {
+    runAnimationPart1()
+  }
+  
+  func runAnimationPart1() {
+    withAnimation(.easeIn(duration: uAnimationDuration)) {
+      percent = 1
+    }
+  }
+}
+
 struct FuberU: Shape {
   var percent: Double
   
