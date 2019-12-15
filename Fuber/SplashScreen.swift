@@ -43,6 +43,8 @@ struct SplashScreen: View {
   @State var lineScale: CGFloat = 1
   @State var textAlpha = 0.0
   @State var textScale: CGFloat = 1
+  @State var coverCircleScale: CGFloat = 1
+  @State var coverCircleAlpha = 0.0
   
   var body: some View {
     ZStack {
