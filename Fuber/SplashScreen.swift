@@ -69,6 +69,12 @@ struct SplashScreen: View {
           self.squareColor = self.fuberBlue
       }
 
+      Rectangle()
+        .fill(fuberBlue)
+        .scaleEffect(lineScale, anchor: .bottom)
+        .frame(width: lineWith, height: lineHeight, alignment: .center)
+        .offset(x: 0, y: -22)
+
       Spacer()
     }
     .frame(minWidth: 0, maxWidth: .infinity,
