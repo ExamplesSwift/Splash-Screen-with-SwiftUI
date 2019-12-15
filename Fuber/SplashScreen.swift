@@ -53,6 +53,12 @@ struct SplashScreen: View {
         .resizable(resizingMode: .tile)
         .opacity(textAlpha)
         .scaleEffect(textScale)
+      
+      Circle()
+        .fill(fuberBlue)
+        .frame(width: 1, height: 1, alignment: .center)
+        .scaleEffect(coverCircleScale)
+        .opacity(coverCircleAlpha)
 
       Text("F           BER")
         .font(.largeTitle)
