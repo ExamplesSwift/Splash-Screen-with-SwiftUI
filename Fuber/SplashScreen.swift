@@ -108,6 +108,10 @@ extension SplashScreen {
       lineScale = 1
     }
     
+    withAnimation(Animation.easeIn(duration: uAnimationDuration).delay(0.5)) {
+      textAlpha = 1.0
+    }
+
     let deadline: DispatchTime = .now() + uAnimationDuration + uAnimationDelay
     DispatchQueue.main.asyncAfter(deadline: deadline) {
       
@@ -119,6 +123,11 @@ extension SplashScreen {
       withAnimation(.easeOut(duration: self.minAnimationInterval)) {
         self.SquareScale = 0
       }
+      
+      withAnimation(Animation.spring()) {
+        self.textScale = self.uZoomFactor
+      }
+
     }
   }
   
