@@ -138,7 +138,7 @@ extension SplashScreen {
   }
 
   func restartAnimation() {
-    let deadline: DispatchTime = .now() + uAnimationDuration
+    let deadline: DispatchTime = .now() + 2 * uAnimationDuration + finalAnimationDuration
     DispatchQueue.main.asyncAfter(deadline: deadline) {
       self.percent = 0
       self.handleAnimations()
