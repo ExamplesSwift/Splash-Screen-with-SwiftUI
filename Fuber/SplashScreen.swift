@@ -49,8 +49,10 @@ struct SplashScreen: View {
       Text("F           BER")
         .font(.largeTitle)
         .foregroundColor(.white)
+        .opacity(textAlpha)
         .offset(x: 20,
                 y: 0)
+      .scaleEffect(textScale)
       
       FuberU(percent: percent)
         .stroke(Color.white, lineWidth: uLineWidth)
