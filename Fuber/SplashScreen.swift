@@ -153,6 +153,7 @@ extension SplashScreen {
     let deadline: DispatchTime = .now() + 2 * uAnimationDuration + finalAnimationDuration
     DispatchQueue.main.asyncAfter(deadline: deadline) {
       self.percent = 0
+      self.textScale = 1
       self.handleAnimations()
     }
   }
