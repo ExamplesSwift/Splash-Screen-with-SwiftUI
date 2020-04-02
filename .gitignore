@@ -152,4 +152,6 @@ xcuserdata
 ### Xcode Patch ###
 **/xcshareddata/WorkspaceSettings.xcsettings
 
+## Agegand otro comentario
+
 # End of https://www.gitignore.io/api/swift,xcode,macos,swiftpm,carthage,cocoapods,swiftpackagemanager
